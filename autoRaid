@@ -1,0 +1,749 @@
+--// تم توليد هذا السكربت تلقائياً بواسطة محول الواجهات الذكي
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- إنشاء: RaidsGui (ScreenGui)
+local ui_RaidsGui_1 = Instance.new("ScreenGui")
+ui_RaidsGui_1.Name = "RaidsGui"
+ui_RaidsGui_1.Enabled = true
+ui_RaidsGui_1.ResetOnSpawn = true
+ui_RaidsGui_1.IgnoreGuiInset = false
+ui_RaidsGui_1.DisplayOrder = 0
+ui_RaidsGui_1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ui_RaidsGui_1.Parent = playerGui
+
+-- إنشاء: MainFrame (Frame)
+local ui_MainFrame_2 = Instance.new("Frame")
+ui_MainFrame_2.Name = "MainFrame"
+ui_MainFrame_2.AnchorPoint = Vector2.new(0, 0)
+ui_MainFrame_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ui_MainFrame_2.BackgroundTransparency = 0.20000000298023224
+ui_MainFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_MainFrame_2.BorderSizePixel = 0
+ui_MainFrame_2.Position = UDim2.new(0.367958, 0, 0.309886, 0)
+ui_MainFrame_2.Rotation = 0
+ui_MainFrame_2.Size = UDim2.new(0.264085, 0, 0.380228, 0)
+ui_MainFrame_2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_MainFrame_2.Visible = true
+ui_MainFrame_2.ZIndex = 1
+ui_MainFrame_2.ClipsDescendants = false
+ui_MainFrame_2.LayoutOrder = 0
+ui_MainFrame_2.Parent = ui_RaidsGui_1
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_3 = Instance.new("UICorner")
+ui_UICorner_3.Name = "UICorner"
+ui_UICorner_3.CornerRadius = UDim.new(0, 8)
+ui_UICorner_3.Parent = ui_MainFrame_2
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_4 = Instance.new("UIStroke")
+ui_UIStroke_4.Name = "UIStroke"
+ui_UIStroke_4.Color = Color3.fromRGB(255, 255, 255)
+ui_UIStroke_4.Thickness = 2
+ui_UIStroke_4.Transparency = 0
+ui_UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_4.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_4.Parent = ui_MainFrame_2
+
+-- إنشاء: RaidBtn (Frame)
+local ui_RaidBtn_5 = Instance.new("Frame")
+ui_RaidBtn_5.Name = "RaidBtn"
+ui_RaidBtn_5.AnchorPoint = Vector2.new(0, 0)
+ui_RaidBtn_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ui_RaidBtn_5.BackgroundTransparency = 0.30000001192092896
+ui_RaidBtn_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_RaidBtn_5.BorderSizePixel = 0
+ui_RaidBtn_5.Position = UDim2.new(0.0233333, 0, 0.155, 0)
+ui_RaidBtn_5.Rotation = 0
+ui_RaidBtn_5.Size = UDim2.new(0.95, 0, 0.15, 0)
+ui_RaidBtn_5.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_RaidBtn_5.Visible = true
+ui_RaidBtn_5.ZIndex = 1
+ui_RaidBtn_5.ClipsDescendants = false
+ui_RaidBtn_5.LayoutOrder = 0
+ui_RaidBtn_5.Parent = ui_MainFrame_2
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_6 = Instance.new("UICorner")
+ui_UICorner_6.Name = "UICorner"
+ui_UICorner_6.CornerRadius = UDim.new(0, 8)
+ui_UICorner_6.Parent = ui_RaidBtn_5
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_7 = Instance.new("UIStroke")
+ui_UIStroke_7.Name = "UIStroke"
+ui_UIStroke_7.Color = Color3.fromRGB(255, 255, 255)
+ui_UIStroke_7.Thickness = 2
+ui_UIStroke_7.Transparency = 0
+ui_UIStroke_7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_7.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_7.Parent = ui_RaidBtn_5
+
+-- إنشاء: ToggleBtn (TextButton)
+local ui_ToggleBtn_8 = Instance.new("TextButton")
+ui_ToggleBtn_8.Name = "ToggleBtn"
+ui_ToggleBtn_8.AnchorPoint = Vector2.new(0, 0)
+ui_ToggleBtn_8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ui_ToggleBtn_8.BackgroundTransparency = 0
+ui_ToggleBtn_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_ToggleBtn_8.BorderSizePixel = 0
+ui_ToggleBtn_8.Position = UDim2.new(0.757895, 0, 0, 0)
+ui_ToggleBtn_8.Rotation = 0
+ui_ToggleBtn_8.Size = UDim2.new(0.242105, 0, 1, 0)
+ui_ToggleBtn_8.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_ToggleBtn_8.Visible = true
+ui_ToggleBtn_8.ZIndex = 1
+ui_ToggleBtn_8.ClipsDescendants = false
+ui_ToggleBtn_8.LayoutOrder = 0
+ui_ToggleBtn_8.Text = "Toggle"
+ui_ToggleBtn_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_ToggleBtn_8.TextSize = 14
+ui_ToggleBtn_8.TextScaled = false
+ui_ToggleBtn_8.TextWrapped = false
+ui_ToggleBtn_8.TextXAlignment = Enum.TextXAlignment.Center
+ui_ToggleBtn_8.TextYAlignment = Enum.TextYAlignment.Center
+ui_ToggleBtn_8.RichText = false
+ui_ToggleBtn_8.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_ToggleBtn_8.TextTransparency = 0
+ui_ToggleBtn_8.AutoButtonColor = true
+ui_ToggleBtn_8.Parent = ui_RaidBtn_5
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_9 = Instance.new("UICorner")
+ui_UICorner_9.Name = "UICorner"
+ui_UICorner_9.CornerRadius = UDim.new(0, 8)
+ui_UICorner_9.Parent = ui_ToggleBtn_8
+
+-- إنشاء: TextLabel (TextLabel)
+local ui_TextLabel_10 = Instance.new("TextLabel")
+ui_TextLabel_10.Name = "TextLabel"
+ui_TextLabel_10.AnchorPoint = Vector2.new(0, 0)
+ui_TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ui_TextLabel_10.BackgroundTransparency = 1
+ui_TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_TextLabel_10.BorderSizePixel = 0
+ui_TextLabel_10.Position = UDim2.new(0.0385965, 0, 0, 0)
+ui_TextLabel_10.Rotation = 0
+ui_TextLabel_10.Size = UDim2.new(0.719298, 0, 1, 0)
+ui_TextLabel_10.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_TextLabel_10.Visible = true
+ui_TextLabel_10.ZIndex = 1
+ui_TextLabel_10.ClipsDescendants = false
+ui_TextLabel_10.LayoutOrder = 0
+ui_TextLabel_10.Text = "Auto Raid"
+ui_TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_TextLabel_10.TextSize = 14
+ui_TextLabel_10.TextScaled = false
+ui_TextLabel_10.TextWrapped = true
+ui_TextLabel_10.TextXAlignment = Enum.TextXAlignment.Left
+ui_TextLabel_10.TextYAlignment = Enum.TextYAlignment.Center
+ui_TextLabel_10.RichText = false
+ui_TextLabel_10.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_TextLabel_10.TextTransparency = 0
+ui_TextLabel_10.Parent = ui_RaidBtn_5
+
+-- إنشاء: TopBar (TextLabel)
+local ui_TopBar_11 = Instance.new("TextLabel")
+ui_TopBar_11.Name = "TopBar"
+ui_TopBar_11.AnchorPoint = Vector2.new(0, 0)
+ui_TopBar_11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ui_TopBar_11.BackgroundTransparency = 0
+ui_TopBar_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_TopBar_11.BorderSizePixel = 0
+ui_TopBar_11.Position = UDim2.new(0, 0, 0, 0)
+ui_TopBar_11.Rotation = 0
+ui_TopBar_11.Size = UDim2.new(1, 0, 0.115, 0)
+ui_TopBar_11.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_TopBar_11.Visible = true
+ui_TopBar_11.ZIndex = 1
+ui_TopBar_11.ClipsDescendants = false
+ui_TopBar_11.LayoutOrder = 0
+ui_TopBar_11.Text = "Raid Hub - Blox Fruits"
+ui_TopBar_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_TopBar_11.TextSize = 14
+ui_TopBar_11.TextScaled = false
+ui_TopBar_11.TextWrapped = false
+ui_TopBar_11.TextXAlignment = Enum.TextXAlignment.Left
+ui_TopBar_11.TextYAlignment = Enum.TextYAlignment.Center
+ui_TopBar_11.RichText = false
+ui_TopBar_11.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_TopBar_11.TextTransparency = 0
+ui_TopBar_11.Parent = ui_MainFrame_2
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_12 = Instance.new("UICorner")
+ui_UICorner_12.Name = "UICorner"
+ui_UICorner_12.CornerRadius = UDim.new(0, 8)
+ui_UICorner_12.Parent = ui_TopBar_11
+
+-- إنشاء: Frame (Frame)
+local ui_Frame_13 = Instance.new("Frame")
+ui_Frame_13.Name = "Frame"
+ui_Frame_13.AnchorPoint = Vector2.new(0, 0)
+ui_Frame_13.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ui_Frame_13.BackgroundTransparency = 0
+ui_Frame_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_Frame_13.BorderSizePixel = 0
+ui_Frame_13.Position = UDim2.new(0.94, 0, 0.247391, 0)
+ui_Frame_13.Rotation = 0
+ui_Frame_13.Size = UDim2.new(0.0333333, 0, 0.434783, 0)
+ui_Frame_13.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_Frame_13.Visible = true
+ui_Frame_13.ZIndex = 1
+ui_Frame_13.ClipsDescendants = false
+ui_Frame_13.LayoutOrder = 0
+ui_Frame_13.Parent = ui_TopBar_11
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_14 = Instance.new("UICorner")
+ui_UICorner_14.Name = "UICorner"
+ui_UICorner_14.CornerRadius = UDim.new(1, 0)
+ui_UICorner_14.Parent = ui_Frame_13
+
+-- إنشاء: Frame (Frame)
+local ui_Frame_15 = Instance.new("Frame")
+ui_Frame_15.Name = "Frame"
+ui_Frame_15.AnchorPoint = Vector2.new(0, 0)
+ui_Frame_15.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+ui_Frame_15.BackgroundTransparency = 0
+ui_Frame_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_Frame_15.BorderSizePixel = 0
+ui_Frame_15.Position = UDim2.new(0.88, 0, 0.247391, 0)
+ui_Frame_15.Rotation = 0
+ui_Frame_15.Size = UDim2.new(0.0333333, 0, 0.434783, 0)
+ui_Frame_15.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_Frame_15.Visible = true
+ui_Frame_15.ZIndex = 1
+ui_Frame_15.ClipsDescendants = false
+ui_Frame_15.LayoutOrder = 0
+ui_Frame_15.Parent = ui_TopBar_11
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_16 = Instance.new("UICorner")
+ui_UICorner_16.Name = "UICorner"
+ui_UICorner_16.CornerRadius = UDim.new(1, 0)
+ui_UICorner_16.Parent = ui_Frame_15
+
+-- إنشاء: Frame (Frame)
+local ui_Frame_17 = Instance.new("Frame")
+ui_Frame_17.Name = "Frame"
+ui_Frame_17.AnchorPoint = Vector2.new(0, 0)
+ui_Frame_17.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+ui_Frame_17.BackgroundTransparency = 0
+ui_Frame_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_Frame_17.BorderSizePixel = 0
+ui_Frame_17.Position = UDim2.new(0.816667, 0, 0.247391, 0)
+ui_Frame_17.Rotation = 0
+ui_Frame_17.Size = UDim2.new(0.0333333, 0, 0.434783, 0)
+ui_Frame_17.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_Frame_17.Visible = true
+ui_Frame_17.ZIndex = 1
+ui_Frame_17.ClipsDescendants = false
+ui_Frame_17.LayoutOrder = 0
+ui_Frame_17.Parent = ui_TopBar_11
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_18 = Instance.new("UICorner")
+ui_UICorner_18.Name = "UICorner"
+ui_UICorner_18.CornerRadius = UDim.new(1, 0)
+ui_UICorner_18.Parent = ui_Frame_17
+
+-- إنشاء: MeleeBtn (TextButton)
+local ui_MeleeBtn_19 = Instance.new("TextButton")
+ui_MeleeBtn_19.Name = "MeleeBtn"
+ui_MeleeBtn_19.AnchorPoint = Vector2.new(0, 0)
+ui_MeleeBtn_19.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ui_MeleeBtn_19.BackgroundTransparency = 0
+ui_MeleeBtn_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_MeleeBtn_19.BorderSizePixel = 0
+ui_MeleeBtn_19.Position = UDim2.new(0.0233333, 0, 0.82, 0)
+ui_MeleeBtn_19.Rotation = 0
+ui_MeleeBtn_19.Size = UDim2.new(0.3, 0, 0.15, 0)
+ui_MeleeBtn_19.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_MeleeBtn_19.Visible = false
+ui_MeleeBtn_19.ZIndex = 1
+ui_MeleeBtn_19.ClipsDescendants = false
+ui_MeleeBtn_19.LayoutOrder = 0
+ui_MeleeBtn_19.Text = "Button"
+ui_MeleeBtn_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_MeleeBtn_19.TextSize = 14
+ui_MeleeBtn_19.TextScaled = false
+ui_MeleeBtn_19.TextWrapped = false
+ui_MeleeBtn_19.TextXAlignment = Enum.TextXAlignment.Center
+ui_MeleeBtn_19.TextYAlignment = Enum.TextYAlignment.Center
+ui_MeleeBtn_19.RichText = false
+ui_MeleeBtn_19.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_MeleeBtn_19.TextTransparency = 0
+ui_MeleeBtn_19.AutoButtonColor = true
+ui_MeleeBtn_19.Parent = ui_MainFrame_2
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_20 = Instance.new("UICorner")
+ui_UICorner_20.Name = "UICorner"
+ui_UICorner_20.CornerRadius = UDim.new(0, 8)
+ui_UICorner_20.Parent = ui_MeleeBtn_19
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_21 = Instance.new("UIStroke")
+ui_UIStroke_21.Name = "UIStroke"
+ui_UIStroke_21.Color = Color3.fromRGB(255, 255, 255)
+ui_UIStroke_21.Thickness = 2
+ui_UIStroke_21.Transparency = 0
+ui_UIStroke_21.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_21.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_21.Parent = ui_MeleeBtn_19
+
+-- إنشاء: FruitBtn (TextButton)
+local ui_FruitBtn_22 = Instance.new("TextButton")
+ui_FruitBtn_22.Name = "FruitBtn"
+ui_FruitBtn_22.AnchorPoint = Vector2.new(0, 0)
+ui_FruitBtn_22.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ui_FruitBtn_22.BackgroundTransparency = 0
+ui_FruitBtn_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_FruitBtn_22.BorderSizePixel = 0
+ui_FruitBtn_22.Position = UDim2.new(0.346667, 0, 0.82, 0)
+ui_FruitBtn_22.Rotation = 0
+ui_FruitBtn_22.Size = UDim2.new(0.3, 0, 0.15, 0)
+ui_FruitBtn_22.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_FruitBtn_22.Visible = false
+ui_FruitBtn_22.ZIndex = 1
+ui_FruitBtn_22.ClipsDescendants = false
+ui_FruitBtn_22.LayoutOrder = 0
+ui_FruitBtn_22.Text = "Button"
+ui_FruitBtn_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_FruitBtn_22.TextSize = 14
+ui_FruitBtn_22.TextScaled = false
+ui_FruitBtn_22.TextWrapped = false
+ui_FruitBtn_22.TextXAlignment = Enum.TextXAlignment.Center
+ui_FruitBtn_22.TextYAlignment = Enum.TextYAlignment.Center
+ui_FruitBtn_22.RichText = false
+ui_FruitBtn_22.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_FruitBtn_22.TextTransparency = 0
+ui_FruitBtn_22.AutoButtonColor = true
+ui_FruitBtn_22.Parent = ui_MainFrame_2
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_23 = Instance.new("UICorner")
+ui_UICorner_23.Name = "UICorner"
+ui_UICorner_23.CornerRadius = UDim.new(0, 8)
+ui_UICorner_23.Parent = ui_FruitBtn_22
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_24 = Instance.new("UIStroke")
+ui_UIStroke_24.Name = "UIStroke"
+ui_UIStroke_24.Color = Color3.fromRGB(255, 255, 255)
+ui_UIStroke_24.Thickness = 2
+ui_UIStroke_24.Transparency = 0
+ui_UIStroke_24.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_24.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_24.Parent = ui_FruitBtn_22
+
+-- إنشاء: SwordBtn (TextButton)
+local ui_SwordBtn_25 = Instance.new("TextButton")
+ui_SwordBtn_25.Name = "SwordBtn"
+ui_SwordBtn_25.AnchorPoint = Vector2.new(0, 0)
+ui_SwordBtn_25.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ui_SwordBtn_25.BackgroundTransparency = 0
+ui_SwordBtn_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_SwordBtn_25.BorderSizePixel = 0
+ui_SwordBtn_25.Position = UDim2.new(0.673333, 0, 0.82, 0)
+ui_SwordBtn_25.Rotation = 0
+ui_SwordBtn_25.Size = UDim2.new(0.3, 0, 0.15, 0)
+ui_SwordBtn_25.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_SwordBtn_25.Visible = false
+ui_SwordBtn_25.ZIndex = 1
+ui_SwordBtn_25.ClipsDescendants = false
+ui_SwordBtn_25.LayoutOrder = 0
+ui_SwordBtn_25.Text = "Button"
+ui_SwordBtn_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_SwordBtn_25.TextSize = 14
+ui_SwordBtn_25.TextScaled = false
+ui_SwordBtn_25.TextWrapped = false
+ui_SwordBtn_25.TextXAlignment = Enum.TextXAlignment.Center
+ui_SwordBtn_25.TextYAlignment = Enum.TextYAlignment.Center
+ui_SwordBtn_25.RichText = false
+ui_SwordBtn_25.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_SwordBtn_25.TextTransparency = 0
+ui_SwordBtn_25.AutoButtonColor = true
+ui_SwordBtn_25.Parent = ui_MainFrame_2
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_26 = Instance.new("UICorner")
+ui_UICorner_26.Name = "UICorner"
+ui_UICorner_26.CornerRadius = UDim.new(0, 8)
+ui_UICorner_26.Parent = ui_SwordBtn_25
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_27 = Instance.new("UIStroke")
+ui_UIStroke_27.Name = "UIStroke"
+ui_UIStroke_27.Color = Color3.fromRGB(255, 255, 255)
+ui_UIStroke_27.Thickness = 2
+ui_UIStroke_27.Transparency = 0
+ui_UIStroke_27.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_27.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_27.Parent = ui_SwordBtn_25
+
+-- إنشاء: MainBtn (TextButton)
+local ui_MainBtn_28 = Instance.new("TextButton")
+ui_MainBtn_28.Name = "MainBtn"
+ui_MainBtn_28.AnchorPoint = Vector2.new(0, 0)
+ui_MainBtn_28.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+ui_MainBtn_28.BackgroundTransparency = 0
+ui_MainBtn_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui_MainBtn_28.BorderSizePixel = 0
+ui_MainBtn_28.Position = UDim2.new(0.90669, 0, 0.0152091, 0)
+ui_MainBtn_28.Rotation = 0
+ui_MainBtn_28.Size = UDim2.new(0.0880282, 0, 0.0570342, 0)
+ui_MainBtn_28.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ui_MainBtn_28.Visible = true
+ui_MainBtn_28.ZIndex = 1
+ui_MainBtn_28.ClipsDescendants = false
+ui_MainBtn_28.LayoutOrder = 0
+ui_MainBtn_28.Text = "Toggle"
+ui_MainBtn_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+ui_MainBtn_28.TextSize = 14
+ui_MainBtn_28.TextScaled = false
+ui_MainBtn_28.TextWrapped = false
+ui_MainBtn_28.TextXAlignment = Enum.TextXAlignment.Center
+ui_MainBtn_28.TextYAlignment = Enum.TextYAlignment.Center
+ui_MainBtn_28.RichText = false
+ui_MainBtn_28.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ui_MainBtn_28.TextTransparency = 0
+ui_MainBtn_28.AutoButtonColor = true
+ui_MainBtn_28.Parent = ui_RaidsGui_1
+
+-- إنشاء: UICorner (UICorner)
+local ui_UICorner_29 = Instance.new("UICorner")
+ui_UICorner_29.Name = "UICorner"
+ui_UICorner_29.CornerRadius = UDim.new(0, 8)
+ui_UICorner_29.Parent = ui_MainBtn_28
+
+-- إنشاء: UIStroke (UIStroke)
+local ui_UIStroke_30 = Instance.new("UIStroke")
+ui_UIStroke_30.Name = "UIStroke"
+ui_UIStroke_30.Color = Color3.fromRGB(255, 255, 255)
+ui_UIStroke_30.Thickness = 2
+ui_UIStroke_30.Transparency = 0
+ui_UIStroke_30.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ui_UIStroke_30.LineJoinMode = Enum.LineJoinMode.Round
+ui_UIStroke_30.Parent = ui_MainBtn_28
+
+--// ==========================================
+--// البرمجات المدمجة التي كانت داخل الواجهة
+--// ==========================================
+
+-- تشغيل برمجة: LocalScript
+task.spawn(function()
+	local script = setmetatable({Parent = ui_ToggleBtn_8, Name = "LocalScript"}, {__index = ui_ToggleBtn_8})
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local TweenService = game:GetService("TweenService")
+	local VirtualInputManager = game:GetService("VirtualInputManager")
+	
+	local player = Players.LocalPlayer
+	local button = script.Parent
+	local frame = button:FindFirstAncestorOfClass("Frame") or button.Parent
+	
+	-- إعدادات قابلة للتعديل حسب لعبتك
+	local CONFIG = {
+		RaidMapName = "RaidMap",
+		IslandName = "RaidIsland1",
+		EnemiesFolderName = "Enemies",
+		AttributeName = "melee", -- اسم الـ Attribute أو القيمة المطلوبة (انظر الشرح بالأسفل)
+		HitboxTargetSize = Vector3.new(250, 120, 250), -- حجم كبير جدًا يغطي الجزيرة من الوسط للأطراف
+		TweenDuration = 0.8, -- مدة التحريك المخصص للوسط
+		AttackInterval = 0.25, -- الفاصل الزمني بين الضربات
+		ActiveColor = Color3.fromRGB(46, 204, 113), -- أخضر عند التفعيل
+	}
+	
+	local originalColor = frame and frame:IsA("GuiObject") and frame.BackgroundColor3 or Color3.fromRGB(255, 255, 255)
+	local isEnabled = false
+	local connections = {}
+	local originalHitboxes = {} -- [BasePart] = {Size = Vector3, CanCollide = boolean, Transparency = number}
+	local centerCFrame = nil
+	
+	local function clearConnections()
+		for _, conn in ipairs(connections) do
+			if conn.Connected then
+				conn:Disconnect()
+			end
+		end
+		table.clear(connections)
+	end
+	
+	local function getIslandCenterCFrame()
+		local raidMap = workspace:FindFirstChild(CONFIG.RaidMapName)
+		if not raidMap then return nil end
+	
+		local island = raidMap:FindFirstChild(CONFIG.IslandName)
+		if not island then return nil end
+	
+		if island:IsA("Model") then
+			local cf, size = island:GetBoundingBox()
+			-- رفع اللاعب قليلًا فوق منتصف الجزيرة حتى لا يعلق بالأرض
+			return CFrame.new(cf.Position + Vector3.new(0, math.max(size.Y * 0.5 + 3, 5), 0))
+		elseif island:IsA("BasePart") then
+			return CFrame.new(island.Position + Vector3.new(0, island.Size.Y * 0.5 + 3, 0))
+		end
+	
+		return nil
+	end
+	
+	-- Custom Tween بدون الاعتماد على TweenService الخاص بـ CFrame فقط (حركة ملساء مخصصة عبر RunService)
+	local function customTweenToCenter(targetCF, duration)
+		local character = player.Character
+		local root = character and character:FindFirstChild("HumanoidRootPart")
+		if not root or not targetCF then return end
+	
+		local startCF = root.CFrame
+		local elapsed = 0
+	
+		while elapsed < duration and isEnabled do
+			character = player.Character
+			root = character and character:FindFirstChild("HumanoidRootPart")
+			if not root then break end
+	
+			local dt = RunService.RenderStepped:Wait()
+			elapsed += dt
+			local alpha = math.clamp(elapsed / duration, 0, 1)
+			-- EaseInOut مخصص
+			local smoothAlpha = alpha < 0.5 and (4 * alpha * alpha * alpha) or (1 - ((-2 * alpha + 2) ^ 3) / 2)
+			root.CFrame = startCF:Lerp(targetCF, smoothAlpha)
+		end
+	
+		if isEnabled and root then
+			root.CFrame = targetCF
+		end
+	end
+	
+	local function isMeleeTool(tool)
+		if not tool or not tool:IsA("Tool") then
+			return false
+		end
+	
+		-- الحالة 1: وجود Attribute اسمه "melee" بقيمة true
+		local attrByName = tool:GetAttribute(CONFIG.AttributeName)
+		if attrByName == true or attrByName == "melee" then
+			return true
+		end
+	
+		-- الحالة 2: وجود أي Attribute قيمته تساوي "melee"
+		for _, val in pairs(tool:GetAttributes()) do
+			if val == "melee" then
+				return true
+			end
+		end
+	
+		return false
+	end
+	
+	local function equipMeleeTool()
+		local character = player.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+		local backpack = player:FindFirstChildOfClass("Backpack")
+		if not character or not humanoid or not backpack then return nil end
+	
+		-- إذا كانت الأداة مجهزة مسبقًا في الشخصية
+		for _, item in ipairs(character:GetChildren()) do
+			if isMeleeTool(item) then
+				return item
+			end
+		end
+	
+		-- البحث في الشنطة (Backpack) وتجهيزها
+		for _, item in ipairs(backpack:GetChildren()) do
+			if isMeleeTool(item) then
+				humanoid:EquipTool(item)
+				return item
+			end
+		end
+	
+		return nil
+	end
+	
+	local function findHitboxPart(enemyModel)
+		if not enemyModel or not enemyModel:IsA("Model") then
+			return nil
+		end
+	
+		-- البحث عن جزء باسم Hitbox أو مشابه، وإلا استخدام HumanoidRootPart أو PrimaryPart
+		local directHitbox = enemyModel:FindFirstChild("Hitbox", true)
+		if directHitbox and directHitbox:IsA("BasePart") then
+			return directHitbox
+		end
+	
+		for _, desc in ipairs(enemyModel:GetDescendants()) do
+			if desc:IsA("BasePart") and string.find(string.lower(desc.Name), "hitbox") then
+				return desc
+			end
+		end
+	
+		return enemyModel:FindFirstChild("HumanoidRootPart") or enemyModel.PrimaryPart
+	end
+	
+	local function expandEnemyHitbox(enemyModel)
+		if not isEnabled or not enemyModel then return end
+	
+		local hitbox = findHitboxPart(enemyModel)
+		if not hitbox then return end
+	
+		-- حفظ الحجم الأصلي مرة واحدة فقط لإرجاعه عند الإيقاف
+		if not originalHitboxes[hitbox] then
+			originalHitboxes[hitbox] = {
+				Size = hitbox.Size,
+				CanCollide = hitbox.CanCollide,
+				Transparency = hitbox.Transparency,
+				Massless = hitbox.Massless,
+			}
+		end
+	
+		-- تكبير الحجم ثم التحقق الفعلي من الحجم
+		hitbox.Massless = true
+		hitbox.CanCollide = false
+		hitbox.Size = CONFIG.HitboxTargetSize
+	
+		-- التحقق من أن الحجم أصبح كبيرًا بالفعل (مع مراعاة قيود المحرك إن وُجدت)
+		if hitbox.Size.Magnitude < CONFIG.HitboxTargetSize.Magnitude * 0.5 then
+			hitbox.Size = Vector3.new(
+				math.max(hitbox.Size.X, 150),
+				math.max(hitbox.Size.Y, 80),
+				math.max(hitbox.Size.Z, 150)
+			)
+		end
+	end
+	
+	local function restoreAllHitboxes()
+		for part, data in pairs(originalHitboxes) do
+			if part and part.Parent then
+				part.Size = data.Size
+				part.CanCollide = data.CanCollide
+				part.Transparency = data.Transparency
+				part.Massless = data.Massless
+			end
+		end
+		table.clear(originalHitboxes)
+	end
+	
+	local function simulateScreenClick(tool)
+		-- تفعيل الأداة مباشرة إن أمكن
+		if tool and tool.Parent == player.Character then
+			pcall(function()
+				tool:Activate()
+			end)
+		end
+	
+		-- محاكاة ضغط زر الفأرة في منتصف الشاشة
+		local camera = workspace.CurrentCamera
+		local viewportSize = camera and camera.ViewportSize or Vector2.new(1280, 720)
+		local x = viewportSize.X * 0.5
+		local y = viewportSize.Y * 0.5
+	
+		pcall(function()
+			VirtualInputManager:SendMouseButtonEvent(x, y, 0, true, game, 1)
+			task.wait(0.03)
+			VirtualInputManager:SendMouseButtonEvent(x, y, 0, false, game, 1)
+		end)
+	end
+	
+	local function setFrameColor(active)
+		if not frame or not frame:IsA("GuiObject") then return end
+		local targetColor = active and CONFIG.ActiveColor or originalColor
+		TweenService:Create(frame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			BackgroundColor3 = targetColor
+		}):Play()
+	end
+	
+	local function startSystem()
+		if isEnabled then return end
+		isEnabled = true
+		setFrameColor(true)
+	
+		centerCFrame = getIslandCenterCFrame()
+		if centerCFrame then
+			task.spawn(function()
+				customTweenToCenter(centerCFrame, CONFIG.TweenDuration)
+			end)
+		end
+	
+		-- مراقبة الأعداء الحاليين والذين يرسبنون لاحقًا في Enemies
+		local enemiesFolder = workspace:FindFirstChild(CONFIG.EnemiesFolderName)
+		if enemiesFolder then
+			for _, child in ipairs(enemiesFolder:GetChildren()) do
+				task.spawn(expandEnemyHitbox, child)
+			end
+	
+			table.insert(connections, enemiesFolder.ChildAdded:Connect(function(child)
+				task.wait(0.05)
+				expandEnemyHitbox(child)
+			end))
+		end
+	
+		-- حلقة التثبيت في الوسط + تجهيز أداة melee + الضرب المستمر
+		task.spawn(function()
+			while isEnabled do
+				centerCFrame = centerCFrame or getIslandCenterCFrame()
+				local character = player.Character
+				local root = character and character:FindFirstChild("HumanoidRootPart")
+	
+				-- إبقاء اللاعب في وسط الجزيرة بعد انتهاء التوين الأولي
+				if root and centerCFrame and (root.Position - centerCFrame.Position).Magnitude > 2 then
+					root.CFrame = centerCFrame
+				end
+	
+				-- التأكد من حجم Hitbox لكل الأعداء الموجودين
+				local currentEnemies = workspace:FindFirstChild(CONFIG.EnemiesFolderName)
+				if currentEnemies then
+					for _, enemy in ipairs(currentEnemies:GetChildren()) do
+						expandEnemyHitbox(enemy)
+					end
+				end
+	
+				-- تجهيز أداة تحمل attribute melee والضرب
+				local equippedTool = equipMeleeTool()
+				simulateScreenClick(equippedTool)
+	
+				task.wait(CONFIG.AttackInterval)
+			end
+		end)
+	end
+	
+	local function stopSystem()
+		if not isEnabled then return end
+		isEnabled = false
+		setFrameColor(false)
+		clearConnections()
+		restoreAllHitboxes()
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		if isEnabled then
+			stopSystem()
+		else
+			startSystem()
+		end
+	end)
+	
+	player.CharacterAdded:Connect(function()
+		if isEnabled then
+			task.wait(0.5)
+			centerCFrame = getIslandCenterCFrame()
+			if centerCFrame then
+				customTweenToCenter(centerCFrame, CONFIG.TweenDuration)
+			end
+		end
+	end)
+end)
+
+-- تشغيل برمجة: LocalScript
+task.spawn(function()
+	local script = setmetatable({Parent = ui_MainBtn_28, Name = "LocalScript"}, {__index = ui_MainBtn_28})
+	local button = script.Parent
+	local screenGui = button:FindFirstAncestorOfClass("ScreenGui")
+	local targetFrame = screenGui:WaitForChild("MainFrame") -- غيّر MainFrame إلى اسم الفريم
+	
+	button.MouseButton1Click:Connect(function()
+		targetFrame.Visible = not targetFrame.Visible
+	end)
+end)
